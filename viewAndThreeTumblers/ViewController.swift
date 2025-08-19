@@ -12,17 +12,21 @@ class ViewController: UIViewController {
     
     @IBOutlet var colorView: UIView!
     
-    
+    var redSliderValue = 0
+    var greenSliderValue = 0
+    var blueSliderValue = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initialAndRangeOfTumblers()
     }
     
+    override func viewWillLayoutSubviews() {
+        colorView.layer.cornerRadius = colorView.frame.height / 4
+    }
+    
     private func initialAndRangeOfTumblers() {
-        redSlider.value = 0
-        greenSlider.value = 0
-        blueSlider.value = 0
+        colorView.backgroundColor = .black
         
         redSlider.minimumValue = 0
         greenSlider.minimumValue = 0
@@ -36,18 +40,16 @@ class ViewController: UIViewController {
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
     }
-
-    @IBAction func redSliderAction() {
-        
+    
+    private func updateLabels() {
+        redLabel.text = String(Int(redSlider.value))
+        greenLabel.text = String(Int(greenSlider.value))
+        blueLabel.text = String(Int(blueSlider.value))
     }
     
-    @IBAction func greenSliderAction() {
-    }
-    
-    @IBAction func blueSliderAction() {
-    }
-    @IBAction func changeColor() {
-        
+    @IBAction func changeColorSlider() {
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value) / 255, green: CGFloat(greenSlider.value) / 255, blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(1))
+        updateLabels()
     }
     
 }
