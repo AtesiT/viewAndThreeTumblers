@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var colorView: UIView!
     
+    @IBOutlet var redTextField: UITextField!
+    @IBOutlet var greenTextField: UITextField!
+    @IBOutlet var blueTextField: UITextField!
+    
     var redSliderValue = 0
     var greenSliderValue = 0
     var blueSliderValue = 0
@@ -39,6 +43,8 @@ class ViewController: UIViewController {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
+        
+        
     }
     
     private func updateLabels() {
