@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  viewAndThreeTumblers
-//
-//  Created by Yarutov on 10.08.2025.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

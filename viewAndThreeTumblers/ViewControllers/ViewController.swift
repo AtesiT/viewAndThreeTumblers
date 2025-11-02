@@ -1,7 +1,8 @@
 import UIKit
 
-class ViewController: UIViewController {
-    
+final class ViewController: UIViewController {
+
+    // MARK: - Outlets
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
@@ -16,14 +17,25 @@ class ViewController: UIViewController {
     @IBOutlet var greenTextField: UITextField!
     @IBOutlet var blueTextField: UITextField!
     
+    @IBOutlet var testTextField: UITextField!
+    
     var redSliderValue = 0
     var greenSliderValue = 0
     var blueSliderValue = 0
+    
+    weak var delegate: ViewControllerDelegate?
 
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         initialAndRangeOfTumblers()
     }
+    
+    // MARK: - Funcs
+    @IBAction func buttonTapped() {
+        dismiss(animated: true)
+    }
+    
     
     override func viewWillLayoutSubviews() {
         colorView.layer.cornerRadius = colorView.frame.height / 4
@@ -54,7 +66,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeColorSlider() {
-        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value) / 255, green: CGFloat(greenSlider.value) / 255, blue: CGFloat(blueSlider.value) / 255, alpha: CGFloat(1))
+//        colorView.backgroundColor = UIColor(
+//            red: CGFloat(redSlider.value) / 255,
+//            green: CGFloat(greenSlider.value) / 255,
+//            blue: CGFloat(blueSlider.value) / 255,
+//            alpha: CGFloat(1))
+        let currentColor = UIColor(
+            red: CGFloat(redSlider.value) / 255,
+            green: CGFloat(greenSlider.value) / 255,
+            blue: CGFloat(blueSlider.value) / 255,
+            alpha: CGFloat(1))
+        
+        colorView.backgroundColor = currentColor
+        delegate?.updateColor(for: currentColor)
         updateLabels()
     }
     
