@@ -13,6 +13,7 @@ final class InitialViewController: UIViewController {
         let theVC = segue.destination as? ViewController
         
         theVC?.delegate = self
+        
     }
     
     override func viewDidLoad() {

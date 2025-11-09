@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="EBd-xN-eYB">
             <objects>
-                <viewController id="uP9-OP-aWx" sceneMemberID="viewController">
+                <viewController id="uP9-OP-aWx" customClass="InitialViewController" customModule="viewAndThreeTumblers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rz8-ya-sGf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0Z-BX-tbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-733.125" y="2.112676056338028"/>
+            <point key="canvasLocation" x="-654" y="2"/>
         </scene>
     </scenes>
     <resources>
