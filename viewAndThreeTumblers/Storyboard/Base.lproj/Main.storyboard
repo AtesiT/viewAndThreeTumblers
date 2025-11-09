@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBC-sD-OZg">
-                                <rect key="frame" x="139" y="310.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBC-sD-OZg">
+                                <rect key="frame" x="124.5" y="310.5" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,7 +27,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xBC-sD-OZg" firstAttribute="centerY" secondItem="ggH-Fk-lgJ" secondAttribute="centerY" id="1ww-RU-qKF"/>
-                            <constraint firstItem="xBC-sD-OZg" firstAttribute="width" secondItem="Rz8-ya-sGf" secondAttribute="height" multiplier="21:284" id="M3f-3R-dvS"/>
                             <constraint firstItem="xBC-sD-OZg" firstAttribute="centerX" secondItem="ggH-Fk-lgJ" secondAttribute="centerX" id="TVZ-aK-JOv"/>
                         </constraints>
                     </view>
@@ -168,15 +167,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-7d-OEa">
-                                <rect key="frame" x="110" y="328.5" width="100" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="igO-F9-bUk"/>
-                                    <constraint firstAttribute="height" constant="35" id="rhy-nP-8ru"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -184,9 +174,6 @@
                             <constraint firstItem="gx6-Za-U2i" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fpf-e6-8ZK"/>
                             <constraint firstItem="gx6-Za-U2i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="RWd-7f-Z00"/>
                             <constraint firstItem="gx6-Za-U2i" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.50088" id="ZbL-Px-5EU"/>
-                            <constraint firstItem="LVR-7d-OEa" firstAttribute="top" secondItem="gx6-Za-U2i" secondAttribute="bottom" constant="20" id="dZf-A6-Whk"/>
-                            <constraint firstItem="LVR-7d-OEa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:142" id="dur-Mr-vJe"/>
-                            <constraint firstItem="LVR-7d-OEa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kpm-4q-Shx"/>
                             <constraint firstItem="gx6-Za-U2i" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="111:284" id="uqv-5G-n67"/>
                         </constraints>
                     </view>
@@ -201,7 +188,6 @@
                         <outlet property="redLabel" destination="VvU-VU-4Rs" id="uSy-dW-pXt"/>
                         <outlet property="redSlider" destination="HF4-V8-kfB" id="CLJ-Nu-Gjh"/>
                         <outlet property="redTextField" destination="pkn-nY-1aO" id="dk6-Oq-mz7"/>
-                        <outlet property="testTextField" destination="LVR-7d-OEa" id="WA1-q9-hDS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -29,6 +29,9 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialAndRangeOfTumblers()
+        redTextField.delegate = self
+        greenTextField.delegate = self
+        blueTextField.delegate = self
     }
     
     // MARK: - Funcs
@@ -64,13 +67,8 @@ final class ViewController: UIViewController {
         greenLabel.text = String(Int(greenSlider.value))
         blueLabel.text = String(Int(blueSlider.value))
     }
-    
+
     @IBAction func changeColorSlider() {
-//        colorView.backgroundColor = UIColor(
-//            red: CGFloat(redSlider.value) / 255,
-//            green: CGFloat(greenSlider.value) / 255,
-//            blue: CGFloat(blueSlider.value) / 255,
-//            alpha: CGFloat(1))
         let currentColor = UIColor(
             red: CGFloat(redSlider.value) / 255,
             green: CGFloat(greenSlider.value) / 255,
@@ -84,3 +82,17 @@ final class ViewController: UIViewController {
     
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let redValue = Float(redTextField.text ?? "0") ?? 0
+        let greenValue = Float(greenTextField.text ?? "0") ?? 0
+        let blueValue = Float(blueTextField.text ?? "0") ?? 0
+        
+        
+        redSlider.value = redValue
+        greenSlider.value = greenValue
+        blueSlider.value = blueValue
+        
+        changeColorSlider()
+    }
+}
